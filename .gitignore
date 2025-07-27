@@ -1,0 +1,6 @@
+.env
+*.zip
+bot.log
+__pycache__/
+*.pyc
+venv/
