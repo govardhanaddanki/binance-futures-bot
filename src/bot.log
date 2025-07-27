@@ -1,0 +1,38 @@
+2025-07-27 18:43:57,104 - Order Failed: APIError(code=0): Invalid JSON error message from Binance: <html>
+<head><title>403 Forbidden</title></head>
+<body>
+<center><h1>403 Forbidden</h1></center>
+</body>
+</html>
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+<!-- a padding to disable MSIE and Chrome friendly error page -->
+
+2025-07-27 18:49:50,178 - ERROR - \u274c Market Order Failed: APIError(code=None): None
+2025-07-27 18:55:43,587 - ERROR - \u274c Market Order Failed: APIError(code=None): None
+Traceback (most recent call last):
+  File "C:\Users\govar\OneDrive\Desktop\binance_futures_bot\src\market_orders.py", line 44, in <module>
+    order = client.futures_create_order(
+        symbol=symbol,
+    ...<2 lines>...
+        quantity=quantity
+    )
+  File "C:\Users\govar\AppData\Roaming\Python\Python313\site-packages\binance\client.py", line 7659, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\govar\AppData\Roaming\Python\Python313\site-packages\binance\client.py", line 126, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\govar\AppData\Roaming\Python\Python313\site-packages\binance\client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\govar\AppData\Roaming\Python\Python313\site-packages\binance\client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=None): None
+
+2025-07-27 19:07:33,070 - \u2705 Market Order Placed: {'symbol': 'BTCUSDT', 'orderId': 9330971, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJcc65328a6986dc198e1686', 'transactTime': 1753623452933, 'price': '0.00000000', 'origQty': '0.00100000', 'executedQty': '0.00100000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '118.15375000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'MARKET', 'side': 'BUY', 'workingTime': 1753623452933, 'fills': [{'price': '118153.75000000', 'qty': '0.00100000', 'commission': '0.00000000', 'commissionAsset': 'BTC', 'tradeId': 1989843}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
+2025-07-27 19:11:44,000 - \u2705 Limit Order Placed: {'symbol': 'BTCUSDT', 'orderId': 9331596, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJ40f95b7d4625bd4b9e5286', 'transactTime': 1753623703856, 'price': '24000.00000000', 'origQty': '0.00100000', 'executedQty': '0.00000000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '0.00000000', 'status': 'NEW', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'BUY', 'workingTime': 1753623703856, 'fills': [], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
+2025-07-27 19:12:06,314 - \u2705 Limit Order Placed: {'symbol': 'BTCUSDT', 'orderId': 9331655, 'orderListId': -1, 'clientOrderId': 'x-HNA2TXFJa1292b05a13813cd53ad86', 'transactTime': 1753623726162, 'price': '30000.00000000', 'origQty': '0.00100000', 'executedQty': '0.00100000', 'origQuoteOrderQty': '0.00000000', 'cummulativeQuoteQty': '118.14400000', 'status': 'FILLED', 'timeInForce': 'GTC', 'type': 'LIMIT', 'side': 'SELL', 'workingTime': 1753623726162, 'fills': [{'price': '118144.00000000', 'qty': '0.00100000', 'commission': '0.00000000', 'commissionAsset': 'USDT', 'tradeId': 1989998}], 'selfTradePreventionMode': 'EXPIRE_MAKER'}
